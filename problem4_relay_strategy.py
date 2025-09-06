@@ -375,7 +375,7 @@ if __name__ == "__main__":
     print(f"理论最大遮蔽时间：{3 * T_eff} s")
     
     # 运行接力策略优化
-    best_vec, best_score = differential_evolution_relay(pop_size=80, gens=250)
+    best_vec, best_score = differential_evolution_relay(pop_size=40, gens=100)
     
     # 分析结果
     final_score = analyze_relay_result(best_vec)
