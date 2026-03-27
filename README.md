@@ -1,5 +1,17 @@
 # Text Emotion Prediction in Browser
 
+## Project Purpose & FAQ
+
+**Q: Is the main purpose of this project to accelerate VLA (Vision-Language-Action) inference?**
+
+No. The primary goal of this project is to demonstrate and accelerate general **ML inference directly in the browser** — eliminating the need for a backend inference server. It uses a text emotion classification model as a concrete example, but the same approach (exporting any model to ONNX and running it with ONNX Runtime Web) can be applied to a wide range of model architectures.
+
+**Q: Is training training-free?**
+
+Yes, from the end-user perspective the deployment is **training-free**. The model has already been fine-tuned offline (using the Google Colab notebooks provided) and exported to ONNX format. Users of the live demo do not need to train or fine-tune anything — the quantized ONNX model is downloaded directly from the CDN and runs entirely in the browser. The training notebooks are provided only for those who want to reproduce or customise the fine-tuning step.
+
+---
+
 This React App demonstrates ML Inference in the Browser using
 
 - [Cloudflare Pages](https://pages.cloudflare.com/) to deliver the React app and model via worldwide Content Delivery Network (CDN)
