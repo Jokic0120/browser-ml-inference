@@ -1,4 +1,10 @@
-# Text Emotion Prediction in Browser
+# Browser ML Inference — VLA Inference Acceleration (Training-Free)
+
+## Project Purpose
+
+The main purpose of this project is to **accelerate VLA (Vision-Language-Action) inference directly in the browser**, with a **training-free** approach. No additional model training or fine-tuning is required: pre-trained transformer models are exported to ONNX format and run entirely client-side via [ONNX Runtime Web](https://onnxruntime.ai/), eliminating the need for a server-side inference backend.
+
+> **Training-free**: The acceleration technique relies solely on model quantization (e.g. `int8` weights) and runtime optimizations (SIMD, multi-threading, graph optimization) applied to an already-trained model. No gradient updates or retraining steps are needed.
 
 This React App demonstrates ML Inference in the Browser using
 
